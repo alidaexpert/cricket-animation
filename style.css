@@ -1,0 +1,68 @@
+.field {
+    border: 1px solid black;
+    height: 600px;
+    background-color: aquamarine;
+}
+
+.bat {
+    position: absolute;
+    left: 12px;
+    top: 230px;
+    height: 200px;
+    transition: transform .2s ease-in;
+}
+
+.field:hover .bat {
+    /* animation: batting 0.2s ease-in; */
+    transform-origin: top right;
+    transform: rotate(-60deg);
+}
+
+@keyframes batting {
+    0% {}
+    100% {
+        transform-origin: top right;
+        transform: rotate(-60deg);
+    }
+}
+
+.ball {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: red;
+    border: 2px dotted white;
+    position: relative;
+    top: -20px;
+    left: 249px;
+}
+
+.field:hover .ball {
+    animation: sliding 1s ease-out 0.3s 1;
+    /* transform: translate(500px, -300px); */
+}
+
+@keyframes sliding {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(500px, -300px);
+    }
+    100% {
+        transform: translate(720px);
+    }
+}
+
+.fa-walking {
+    position: relative;
+    top: -250px;
+    transform: scaleX(-1);
+    left: 950px;
+    font-size: 400px;
+}
+
+.fa-male {
+    transform: translate(60px, 10px);
+    font-size: 400px;
+}
